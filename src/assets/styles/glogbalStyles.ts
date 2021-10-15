@@ -36,9 +36,13 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   body {
-    background: var(--background);
+    background: var(--black);
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
   
   body, input, textarea, button {
@@ -51,6 +55,14 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+    &:focus{
+      border: none !important;
+      background-color: none !important;
+      box-shadow: transparent !important;
+    }
+    &:focus-visible{
+      outline: none !important;
+    }
   }
 
   [disabled] {

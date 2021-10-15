@@ -1,7 +1,19 @@
 import React from "react";
 
+// components
+import { HandleButtonComponent } from "./components/HandleButton";
+
+import { MdOutlineSaveAlt } from 'react-icons/md';
+
 function App() {
-  return <h1>Pai</h1>;
+  return (
+    <>
+      <HandleButtonComponent 
+      Icon={MdOutlineSaveAlt} 
+      text="Salvar" 
+      />
+    </>
+  );
 }
 
 export default App;
