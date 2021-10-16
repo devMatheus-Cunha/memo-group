@@ -19,7 +19,9 @@ export const GlobalStyle = createGlobalStyle`
   
     --background: #f0f2f5;
     --white: #ffffff;
-    --black: #000
+    --black: #000;
+    --gray-text: #b0b3b8;
+    --gray-text-hover: #9c9ea1;
   }
   
   * {
