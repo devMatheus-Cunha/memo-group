@@ -4,10 +4,18 @@ import React from "react";
 import { HandleButtonComponent } from "./components/HandleButton";
 
 function App() {
+  const handleSubmit = (): void => {
+    {console.log("yes subimit")
+  }
+  };
   return (
     <>
-      <HandleButtonComponent 
-      text="Salvar" 
+      <HandleButtonComponent
+        text="Salvar"
+        loading={false}
+        icon="save"
+        handleSubmit={handleSubmit}
+        type="submit"
       />
     </>
   );

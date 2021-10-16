@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 // chakra
 import { Button } from "@chakra-ui/react";
@@ -10,16 +10,47 @@ import { FiFilter } from "react-icons/fi";
 // styles
 import { Container } from "./styles";
 
-export function HandleButtonComponent({ text }: any) {
+type HandleButtonComponentProps = {
+  text: string;
+  loading?: boolean;
+  icon?: "save" | "filter" | "report";
+  type: "button" | "submit" | "reset" | undefined;
+  handleSubmit: () => void;
+};
+
+export function HandleButtonComponent({
+  text,
+  loading,
+  icon,
+  handleSubmit,
+  type,
+}: HandleButtonComponentProps) {
+  // function
+  function chakeIcon() {
+    switch (icon) {
+      case "save":
+        return <MdOutlineAdd />;
+      case "filter":
+        return <FiFilter />;
+      case "report":
+        return <MdOutlineSaveAlt />;
+
+      default:
+        break;
+    }
+  }
+
   return (
     <Container>
       <Button
-        rightIcon={<FiFilter />}
-        iconS
+        rightIcon={chakeIcon() as ReactElement}
         variant="solid"
+        onClick={() => handleSubmit()}
         boxShadow="md"
+        type={type}
         background="var(--cyan-600)"
         color="white"
+        isLoading={loading}
         _hover={{
           background: "var(--cyan-700)",
         }}
