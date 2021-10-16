@@ -5,6 +5,7 @@ export const Container = styled.div`
       background-color: transparent !important;
       color: var(--gray-text) !important;
       text-decoration: underline;
+      font-weight: 400;
       
       &:hover {
         color: var(--gray-text-hover) !important;
