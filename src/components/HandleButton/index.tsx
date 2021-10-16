@@ -3,16 +3,32 @@ import React from "react";
 // chakra
 import { Button } from "@chakra-ui/react";
 
-export function HandleButtonComponent({ Icon, text }: any) {
+// icons
+import { MdOutlineSaveAlt, MdOutlineAdd } from "react-icons/md";
+import { FiFilter } from "react-icons/fi";
+
+// styles
+import { Container } from "./styles";
+
+export function HandleButtonComponent({ text }: any) {
   return (
-    <Button
-      rightIcon={<Icon />}
-      variant="solid"
-      boxShadow="md"
-      background= "#00B5D8"
-      color= "white"
-    >
-      {text}
-    </Button>
+    <Container>
+      <Button
+        rightIcon={<FiFilter />}
+        iconS
+        variant="solid"
+        boxShadow="md"
+        background="var(--cyan-600)"
+        color="white"
+        _hover={{
+          background: "var(--cyan-700)",
+        }}
+        _active={{
+          background: "var(--cyan-800)",
+        }}
+      >
+        {text}
+      </Button>
+    </Container>
   );
 }

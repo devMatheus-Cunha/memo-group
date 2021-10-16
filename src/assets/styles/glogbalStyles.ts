@@ -55,14 +55,6 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
-    &:focus{
-      border: none !important;
-      background-color: none !important;
-      box-shadow: transparent !important;
-    }
-    &:focus-visible{
-      outline: none !important;
-    }
   }
 
   [disabled] {
