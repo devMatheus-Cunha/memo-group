@@ -13,17 +13,19 @@ import { Container } from "./styles";
 type HandleButtonComponentProps = {
   text: string;
   loading?: boolean;
+  style?: "cancel" | "back" | undefined; 
   icon?: "save" | "filter" | "report";
   type: "button" | "submit" | "reset" | undefined;
   handleSubmit: () => void;
 };
 
-export function HandleButtonComponent({
+export function ButtonComponent({
   text,
   loading,
   icon,
   handleSubmit,
   type,
+  style,
 }: HandleButtonComponentProps) {
   // function
   function chakeIcon() {
@@ -43,10 +45,10 @@ export function HandleButtonComponent({
   return (
     <Container>
       <Button
+        className={style ? "CancelAndButton" : ""}
         rightIcon={chakeIcon() as ReactElement}
         variant="solid"
         onClick={() => handleSubmit()}
-        boxShadow="md"
         type={type}
         background="var(--cyan-600)"
         color="white"

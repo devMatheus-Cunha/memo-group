@@ -1,21 +1,22 @@
 import React from "react";
 
 // components
-import { HandleButtonComponent } from "./components/HandleButton";
+import { ButtonComponent } from "./components/ButtonComponent";
 
 function App() {
   const handleSubmit = (): void => {
-    {console.log("yes subimit")
-  }
+    {
+      console.log("yes subimit");
+    }
   };
   return (
     <>
-      <HandleButtonComponent
+      <ButtonComponent
         text="Salvar"
         loading={false}
-        icon="save"
         handleSubmit={handleSubmit}
         type="submit"
+        style="back"
       />
     </>
   );
