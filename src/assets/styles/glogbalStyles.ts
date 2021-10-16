@@ -45,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     justify-content: center;
     height: 100vh;
+    color: white;
   }
   
   body, input, textarea, button {

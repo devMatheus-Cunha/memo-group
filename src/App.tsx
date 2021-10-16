@@ -1,7 +1,7 @@
 import React from "react";
 
 // components
-import { ButtonComponent } from "./components/ButtonComponent";
+import { FormComponent } from "./components/FormComponent";
 
 function App() {
   const handleSubmit = (): void => {
@@ -11,13 +11,7 @@ function App() {
   };
   return (
     <>
-      <ButtonComponent
-        text="Salvar"
-        loading={false}
-        handleSubmit={handleSubmit}
-        type="submit"
-        style="back"
-      />
+      <FormComponent />
     </>
   );
 }
