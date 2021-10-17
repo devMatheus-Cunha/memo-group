@@ -20,8 +20,9 @@ export const GlobalStyle = createGlobalStyle`
     --background: #f0f2f5;
     --white: #ffffff;
     --black: #000;
-    --gray-text: #b0b3b8;
-    --gray-text-hover: #9c9ea1;
+   --gray-400: #b0b3b8;
+    --gray-600: #4d4c4c;
+    --gray-hover: #9c9ea1;
   }
   
   * {
