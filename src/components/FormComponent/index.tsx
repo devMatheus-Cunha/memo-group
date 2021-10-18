@@ -1,18 +1,25 @@
-import React from "react";
-import { Formik, Form } from "formik";
+import React, { ReactNode } from "react";
+
+// formik
+import { Formik, Form, FormikValues } from "formik";
+
+// tyope
+type FormComponentProps = {
+  onSubmit: (values: any) => void;
+  initialValues: FormikValues;
+  children: ReactNode;
+};
 
 export const FormComponent = ({
-  children,
-  initialValues,
-  handleSubmit,
   onSubmit,
-}: any) => {
+  initialValues,
+  children,
+}: FormComponentProps) => {
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={(values) => onSubmit(values)}
-    >
-      <Form>{children}</Form>
+    <Formik onSubmit={onSubmit} initialValues={initialValues}>
+      <Form>
+        {children}
+      </Form>
     </Formik>
   );
 };
