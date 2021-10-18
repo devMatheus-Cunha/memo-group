@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  
   html {
     @media (max-width: 1080px) {
       font-size: 93.75%; // 15px
@@ -38,15 +39,12 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 87.5%; // 14px
     }
   }
+
   body {
-    background: var(--black);
+    background: var(--black) !important;
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
-    color: white;
   }
   
   body, input, textarea, button {
