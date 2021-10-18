@@ -16,7 +16,7 @@ type HandleButtonComponentProps = {
   style?: "cancel" | "back" | undefined; 
   icon?: "save" | "filter" | "report";
   type: "button" | "submit" | "reset" | undefined;
-  handleSubmit: () => void;
+  handleSubmit?: (() => void ) | undefined;
 };
 
 export function ButtonComponent({
@@ -48,7 +48,7 @@ export function ButtonComponent({
         className={style ? "CancelAndButton" : ""}
         rightIcon={chakeIcon() as ReactElement}
         variant="solid"
-        onClick={() => handleSubmit()}
+        onClick={handleSubmit}
         type={type}
         background="var(--cyan-600)"
         color="white"
