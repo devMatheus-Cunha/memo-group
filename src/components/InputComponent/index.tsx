@@ -1,10 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 // formik
 import { Field } from "formik";
 
 // styles
 import { Container } from "./styles";
+
+// type
+type InputComponentProps = {
+  id: string;
+  name: string;
+  placeholder?: string;
+  label?: string;
+  required?: boolean;
+  width?: string;
+  type: string
+  children?: ReactNode
+};
 
 export const InputComponent = ({
   id,
@@ -14,7 +26,8 @@ export const InputComponent = ({
   children,
   width,
   required,
-}: any) => {
+  type,
+}: InputComponentProps) => {
   return (
     <Container>
       <label htmlFor={name}>{required ? `${label} *` : label}</label>
@@ -23,7 +36,8 @@ export const InputComponent = ({
         name={name}
         placeholder={placeholder}
         required={required}
-        style={{width: `${width}%`}}
+        style={{ width: `${width}%` }}
+        type={type}
       >
         {children}
       </Field>
