@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
 
 // styles
 // import { Container } from "./styles"
 
 export default function AuthContainer() {
-  return (
-    <div>
-      auth
-    </div>
-  )
+	return (
+		<div>
+			auth
+		</div>
+	)
 }

@@ -11,15 +11,15 @@ type FormComponentProps = {
 };
 
 export const FormComponent = ({
-  onSubmit,
-  initialValues,
-  children,
+	onSubmit,
+	initialValues,
+	children,
 }: FormComponentProps) => {
-  return (
-    <Formik onSubmit={onSubmit} initialValues={initialValues}>
-      <Form>
-        {children}
-      </Form>
-    </Formik>
-  );
+	return (
+		<Formik onSubmit={onSubmit} initialValues={initialValues}>
+			<Form>
+				{children}
+			</Form>
+		</Formik>
+	);
 };

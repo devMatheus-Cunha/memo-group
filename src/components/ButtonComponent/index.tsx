@@ -5,9 +5,9 @@ import { Button } from "@chakra-ui/react";
 
 // icons
 import {
-  MdOutlineSaveAlt,
-  MdOutlineAdd,
-  MdOutlineExitToApp,
+	MdOutlineSaveAlt,
+	MdOutlineAdd,
+	MdOutlineExitToApp,
 } from "react-icons/md";
 import { FiFilter } from "react-icons/fi";
 
@@ -26,54 +26,54 @@ type HandleButtonComponentProps = {
 };
 
 export function ButtonComponent({
-  text,
-  loading,
-  icon,
-  handleSubmit,
-  type,
-  style,
-  size,
-  fontSize,
+	text,
+	loading,
+	icon,
+	handleSubmit,
+	type,
+	style,
+	size,
+	fontSize,
 }: HandleButtonComponentProps) {
-  // function
-  function chakeIcon() {
-    switch (icon) {
-      case "save":
-        return <MdOutlineAdd />;
-      case "filter":
-        return <FiFilter />;
-      case "report":
-        return <MdOutlineSaveAlt />;
-      case "exit":
-        return <MdOutlineExitToApp />;
+	// function
+	function chakeIcon() {
+		switch (icon) {
+		case "save":
+			return <MdOutlineAdd />;
+		case "filter":
+			return <FiFilter />;
+		case "report":
+			return <MdOutlineSaveAlt />;
+		case "exit":
+			return <MdOutlineExitToApp />;
 
-      default:
-        break;
-    }
-  }
+		default:
+			return ""
+		}
+	}
 
-  return (
-    <Container>
-      <Button
-        className={style ? "CancelAndButton" : ""}
-        rightIcon={chakeIcon() as ReactElement}
-        variant="solid"
-        onClick={handleSubmit}
-        type={type}
-        padding={size}
-        fontSize={fontSize}
-        background="var(--cyan-600)"
-        color="white"
-        isLoading={loading}
-        _hover={{
-          background: "var(--cyan-700)",
-        }}
-        _active={{
-          background: "var(--cyan-800)",
-        }}
-      >
-        {text}
-      </Button>
-    </Container>
-  );
+	return (
+		<Container>
+			<Button
+				className={style ? "CancelAndButton" : ""}
+				rightIcon={chakeIcon() as ReactElement}
+				variant="solid"
+				onClick={handleSubmit}
+				type={type}
+				padding={size}
+				fontSize={fontSize}
+				background="var(--cyan-600)"
+				color="white"
+				isLoading={loading}
+				_hover={{
+					background: "var(--cyan-700)",
+				}}
+				_active={{
+					background: "var(--cyan-800)",
+				}}
+			>
+				{text}
+			</Button>
+		</Container>
+	);
 }

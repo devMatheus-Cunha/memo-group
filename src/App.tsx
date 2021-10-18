@@ -1,9 +1,12 @@
 import React from "react";
+import HeaderComponent from "./components/HeaderComponent";
 
 function App() {
-  return (
-    <h1>Home</h1>
-  );
+	return (
+		<>
+			<HeaderComponent />
+		</>
+	);
 }
 
 export default App;
