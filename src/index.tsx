@@ -12,10 +12,8 @@ import { GlobalStyle } from "./assets/styles/glogbalStyles";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChakraProvider>
       <App />
       <GlobalStyle />
-    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
