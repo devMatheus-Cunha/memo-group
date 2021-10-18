@@ -13,9 +13,9 @@ export const GlobalStyle = createGlobalStyle`
     --cyan-800: #086F83;
     --cyan-900: #065666;
 
-    --error: #bf1d11
-    --sucess: #4ad40f
-    --warn: ##f26907
+    --error: #bf1d11;
+    --sucess: #4ad40f;
+    --warn: ##f26907;
   
     --background: #f0f2f5;
     --white: #ffffff;
