@@ -13,9 +13,9 @@ export const GlobalStyle = createGlobalStyle`
     --cyan-800: #086F83;
     --cyan-900: #065666;
 
-    --error: #bf1d11
-    --sucess: #4ad40f
-    --warn: ##f26907
+    --error: #bf1d11;
+    --sucess: #4ad40f;
+    --warn: ##f26907;
   
     --background: #f0f2f5;
     --white: #ffffff;
@@ -30,17 +30,21 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  html, body {
-    background: var(--black);
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Poppins', sans-serif;
-    
+  
+  html {
     @media (max-width: 1080px) {
       font-size: 93.75%; // 15px
     }
     @media (max-width: 720px) {
       font-size: 87.5%; // 14px
     }
+  }
+
+  body {
+    background: var(--black) !important;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
   }
   
   body, input, textarea, button {

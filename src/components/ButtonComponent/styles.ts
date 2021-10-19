@@ -13,14 +13,19 @@ export const Container = styled.div`
   }
 
   button {
+    border: none;
+    border-radius: 5px;
+
     &:focus {
       border: none !important;
       background-color: none !important;
       box-shadow: none !important;
     }
+
     &:focus-visible {
       outline: none !important;
     }
+    
     span {
       svg {
         width: 18px;

@@ -19,28 +19,28 @@ type InputComponentProps = {
 };
 
 export const InputComponent = ({
-  id,
-  name,
-  placeholder,
-  label,
-  children,
-  width,
-  required,
-  type,
+	id,
+	name,
+	placeholder,
+	label,
+	children,
+	width,
+	required,
+	type,
 }: InputComponentProps) => {
-  return (
-    <Container>
-      <label htmlFor={name}>{required ? `${label} *` : label}</label>
-      <Field
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        required={required}
-        style={{ width: `${width}%` }}
-        type={type}
-      >
-        {children}
-      </Field>
-    </Container>
-  );
+	return (
+		<Container>
+			<label htmlFor={name}>{required ? `${label} *` : label}</label>
+			<Field
+				id={id}
+				name={name}
+				placeholder={placeholder}
+				required={required}
+				style={{ width: `${width}%` }}
+				type={type}
+			>
+				{children}
+			</Field>
+		</Container>
+	);
 };
