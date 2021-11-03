@@ -5,18 +5,18 @@ export const Container = styled.div`
   flex-direction: column;
 
   > label {
-    color: var(--gray-600);
+    color: ${({ theme }) => theme.colors.cyan600};
     margin-bottom: 5px;
   }
 
   > input {
-    color: var(--gray-600);
-    border: 1px solid var(--gray-400);
+    color: ${({ theme }) => theme.colors.cyan600};
+    border: 1px solid ${({ theme }) => theme.colors.cyan400};
     border-radius: 5px;
     padding: 5px;
 
     &:focus-visible {
-      outline: var(--gray-hover) auto 1px;
+      outline:${({ theme }) => theme.colors.grayhover} auto 1px;
     }
   }
 `;

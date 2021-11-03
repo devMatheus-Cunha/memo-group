@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 import App from "./App";
 
 // theme base colors
-import baseColors from "./assets/styles/baseColors";
+import baseColors from "./assets/styles/theme/baseColors";
 
 // global styles
 import { GlobalStyle } from "./assets/styles/glogbalStyles";

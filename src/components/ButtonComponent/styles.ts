@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   .CancelAndButton {
       background-color: transparent !important;
-      color: var(--gray-400) !important;
+      color: ${({ theme }) => theme.colors.gray400};
       text-decoration: underline;
       font-weight: 400;
       
       &:hover {
-        color: var(--gray-hover) !important;
+        color: ${({ theme }) => theme.colors.grayhover};
       }
   }
 

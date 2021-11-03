@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: var(--black) !important;
+    background: ${({ theme }) => theme.colors.black} !important;
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', sans-serif;
     height: 100vh;
@@ -55,7 +55,7 @@ export const GlobalStyle = createGlobalStyle`
   .react-modal-content {
     width: 100%;
     max-width: 576px;
-    background: var(--background);
+    background: ${({ theme }) => theme.colors.background};
     padding: 3rem;
     position: relative;
     border-radius: 0.24rem;

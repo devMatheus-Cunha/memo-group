@@ -9,7 +9,7 @@ import logoImg from "../../assets/img/logo/logo-memo-lab.svg"
 // styles
 import { Container, Exit, Logo } from "./styles";
 
-const HeaderComponent: React.FC = () => {
+export const HeaderComponent: React.FC = () => {
 	return (
 		<Container>
 			<Logo src={logoImg} alt="Logo MeMo Lab" />
@@ -25,5 +25,3 @@ const HeaderComponent: React.FC = () => {
 		</Container>
 	);
 };
-
-export default HeaderComponent;

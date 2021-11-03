@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: var(--cyan-500);
+  background-color: ${({ theme }) => theme.colors.cyan500};
 
   display: flex;
   justify-content: space-between;

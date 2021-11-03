@@ -48,7 +48,7 @@ export function ButtonComponent({
 			return <MdOutlineExitToApp />;
 
 		default:
-			return ""
+			return "";
 		}
 	}
 
@@ -62,14 +62,14 @@ export function ButtonComponent({
 				type={type}
 				padding={size}
 				fontSize={fontSize}
-				background="var(--cyan-600)"
+				background="#00A3C4"
 				color="white"
 				isLoading={loading}
 				_hover={{
-					background: "var(--cyan-700)",
+					background: "#0987A0",
 				}}
 				_active={{
-					background: "var(--cyan-800)",
+					background: "#086F83",
 				}}
 			>
 				{text}
