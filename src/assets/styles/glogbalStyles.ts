@@ -1,30 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  :root {
-    --cyan-50: #EDFDFD;
-    --cyan-100: #C4F1F9;
-    --cyan-200: #9DECF9;
-    --cyan-300: #76E4F7;
-    --cyan-400: #0BC5EA;
-    --cyan-500: #00B5D8;
-    --cyan-600: #00A3C4;
-    --cyan-700: #0987A0;
-    --cyan-800: #086F83;
-    --cyan-900: #065666;
-
-    --error: #bf1d11;
-    --sucess: #4ad40f;
-    --warn: ##f26907;
-  
-    --background: #f0f2f5;
-    --white: #ffffff;
-    --black: #000;
-   --gray-400: #b0b3b8;
-    --gray-600: #4d4c4c;
-    --gray-hover: #9c9ea1;
-  }
-  
   * {
     margin: 0;
     padding: 0;
