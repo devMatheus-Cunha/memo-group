@@ -1,10 +1,12 @@
 import React from "react";
-import { HeaderComponent } from "./components/HeaderComponent";
+
+// routes
+import Routes from "./routes/routes";
 
 function App() {
 	return (
 		<>
-			<HeaderComponent />
+			<Routes />
 		</>
 	);
 }
