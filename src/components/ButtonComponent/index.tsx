@@ -17,7 +17,8 @@ import { Container } from "./styles";
 type HandleButtonComponentProps = {
   text: string;
   loading?: boolean;
-  style?: "cancel" | "back" | undefined;
+	access?: boolean;
+  cancelAndBack?: boolean;
   icon?: "save" | "filter" | "report" | "exit";
   type: "button" | "submit" | "reset" | undefined;
   handleSubmit?: (() => void) | undefined;
@@ -31,9 +32,10 @@ export function ButtonComponent({
 	icon,
 	handleSubmit,
 	type,
-	style,
+	cancelAndBack,
 	size,
 	fontSize,
+	access,
 }: HandleButtonComponentProps) {
 	// function
 	function chakeIcon() {
@@ -53,9 +55,9 @@ export function ButtonComponent({
 	}
 
 	return (
-		<Container>
+		<Container access={access}>
 			<Button
-				className={style ? "CancelAndButton" : ""}
+				className={cancelAndBack || access ? "CancelAndButton" : ""}
 				rightIcon={chakeIcon() as ReactElement}
 				variant="solid"
 				onClick={handleSubmit}

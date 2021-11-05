@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+interface IContainerProps {
+  access?: boolean;
+}
+
+export const Container = styled.div<IContainerProps>`
   .CancelAndButton {
       background-color: transparent !important;
-      color: ${({ theme }) => theme.colors.gray400};
+      color: ${({ theme, access }) => (access ? theme.colors.white : theme.colors.gray400)};
       text-decoration: underline;
       font-weight: 400;
+
+      transition: 0.3s;
       
       &:hover {
-        color: ${({ theme }) => theme.colors.grayhover};
+        color: ${({ theme, access }) => (access ? theme.colors.cyan200 : theme.colors.grayhover)};
       }
   }
 
