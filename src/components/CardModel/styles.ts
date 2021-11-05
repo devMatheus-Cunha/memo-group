@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 30%;
-  height: 300px;
+  width: 20%;
+  max-width: 240px;
+  height: 290px;
 
-  margin: 350px auto;
+  margin: 4rem auto;
+
   background-color: ${({ theme }) => theme.colors.cyan600};
   border-radius: 10px;
 
@@ -20,13 +22,13 @@ export const Content = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 1rem 0;
+  gap: 1.7rem 0;
 
   position: relative;
 `;
 
 export const Logo = styled.div`
-  height: 17vh;
+  height: 18vh;
   width: 80%;
   background-color: ${({ theme }) => theme.colors.white};
   margin: 0 auto;
