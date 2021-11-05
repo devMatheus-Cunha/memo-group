@@ -17,10 +17,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.colors.black} !important;
+    background: ${({ theme }) => theme.colors.background} !important;
     -webkit-font-smoothing: antialiased;
     font-family: 'Poppins', sans-serif;
-    height: 100vh;
   }
   
   body, input, textarea, button {
