@@ -27,10 +27,9 @@ export const Content = styled.div`
   position: relative;
 `;
 
-export const Logo = styled.div`
+export const Logo = styled.img`
   height: 18vh;
   width: 80%;
-  background-color: ${({ theme }) => theme.colors.white};
   margin: 0 auto;
 `;
 

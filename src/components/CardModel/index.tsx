@@ -32,7 +32,9 @@ const CardModel = ({
 	return (
 		<Container>
 			<Content>
-				<Logo />
+				{
+					logo && 	<Logo src={logo} />
+				}
 				<ContentTileAndSubtitle>
 					<Title>
 						<h3>{title}</h3>
