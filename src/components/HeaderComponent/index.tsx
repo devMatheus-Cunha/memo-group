@@ -3,25 +3,30 @@ import React from "react";
 // components
 import { ButtonComponent } from "../ButtonComponent";
 
-// images
-import logoImg from "../../assets/img/logo/logo-memo-lab.svg"
-
 // styles
 import { Container, Exit, Logo } from "./styles";
 
-export const HeaderComponent: React.FC = () => {
+// interface
+interface IHeaderComponentProps {
+  logo: string;
+  home?: boolean;
+}
+
+export const HeaderComponent = ({ logo, home }: IHeaderComponentProps) => {
 	return (
 		<Container>
-			<Logo src={logoImg} alt="Logo MeMo Lab" />
-			<Exit>
-				<ButtonComponent
-					type="button"
-					text="Sair"
-					icon="exit"
-					fontSize="14px"
-					size="5px 10px"
-				/>
-			</Exit>
+			<Logo src={logo} alt="Logo MeMo" />
+			{!home && (
+				<Exit>
+					<ButtonComponent
+						type="button"
+						text="Sair"
+						icon="exit"
+						fontSize="14px"
+						size="5px 10px"
+					/>
+				</Exit>
+			)}
 		</Container>
 	);
 };

@@ -12,7 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 24px;
+  height: 21px;
 `;
 
 export const Exit = styled.div``;
