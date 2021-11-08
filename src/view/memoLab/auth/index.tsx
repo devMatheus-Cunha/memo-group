@@ -1,9 +1,10 @@
 import React from "react";
 
-// import { Container } from './styles';
+// container
+import AuthContainer from "../../../containers/memoLab/auth";
 
 const Auth: React.FC = () => {
-	return <div />;
+	return <AuthContainer />
 }
 
 export default Auth;
